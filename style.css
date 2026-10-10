@@ -1,27 +1,21 @@
-/* Custom CSS Styles */
+/* Estilos personalizados para el portafolio de Fernando */
 
-/* Texto con degradado azul/índigo neón */
+
+/* Gradiente para el nombre y acentos principales */
 .gradient-text {
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    background-clip: text; /* Propiedad estándar */
+    -webkit-background-clip: text; /* Compatibilidad */
+    -webkit-text-fill-color: transparent;
 }
 
-/* Scrollbar personalizado estilo Dark */
-::-webkit-scrollbar {
-  width: 8px;
+/* Ajustes adicionales de selección y scroll suave */
+html {
+    scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar-track {
-  background: #090d16;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+body {
+    background-color: #090d16;
+    color: #cbd5e1;
+    font-family: 'Inter', sans-serif;
 }
