@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernando | Desarrollador Web & Mobile - Portafolio</title>
+    
+    <!-- Tailwind CSS v3 Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkbg: '#090d16',
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos personalizados externos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#090d16] text-slate-300 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#090d16]/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="text-sky-400">&lt;</span>Fernando<span class="text-sky-400">/&gt;</span>
+            </a>
+
+            <!-- Menú Escritorio -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-sky-400 transition-colors">Sobre mí</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors">Habilidades</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Proyectos</a>
+                <a href="#contact" class="hover:text-sky-400 transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Botón menú móvil -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white text-2xl focus:outline-none" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menú Móvil desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#090d16] border-b border-slate-800 px-6 py-4 flex flex-col gap-4">
+            <a href="#about" class="mobile-link hover:text-sky-400 font-medium">Sobre mí</a>
+            <a href="#skills" class="mobile-link hover:text-sky-400 font-medium">Habilidades</a>
+            <a href="#projects" class="mobile-link hover:text-sky-400 font-medium">Proyectos</a>
+            <a href="#contact" class="mobile-link hover:text-sky-400 font-medium">Contacto</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="min-h-screen flex items-center justify-center pt-28 pb-16 px-6 relative overflow-hidden">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="max-w-4xl mx-auto text-center z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-sky-400 text-xs font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Disponible para nuevos proyectos
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight mb-6">
+                    Hola, soy <span class="gradient-text">Fernando</span> 👋
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Estudiante de tecnología y desarrollador web & mobile. Apasionado por crear soluciones eficientes, bases de datos robustas y experiencias limpias.
+                </p>
+
+                <!-- BOTONES DEL HERO: Ver Proyectos + Descargar CV -->
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="#projects" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-6 py-3 rounded-xl transition-all shadow-lg shadow-sky-500/25 flex items-center gap-2">
+                        Ver Proyectos <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </a>
+                    <a href="CV_Fernando.pdf" download class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-white font-semibold px-6 py-3 rounded-xl transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-file-arrow-down text-sky-400"></i> Descargar CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MÍ -->
+        <section id="about" class="py-24 px-6 border-t border-slate-800/60 bg-slate-950/40">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                    <span class="text-sky-400">01.</span> Sobre mí
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <div class="md:col-span-2 space-y-4 text-slate-400 leading-relaxed">
+                        <p>
+                            ¡Hola de nuevo! Me especializo en el desarrollo de software, abarcando tanto el diseño de bases de datos relacionales como la programación de aplicaciones web y multiplataforma.
+                        </p>
+                        <p>
+                            Disfruto transformando problemas lógicos en código limpio y estructurado. Constantemente estoy construyendo y probando proyectos prácticos (como apps de gestión de inventarios y expiración, APIs y entornos de red).
+                        </p>
+                        <p>
+                            Busco una oportunidad laboral donde pueda aportar valor, seguir aprendiendo y consolidar mi carrera profesional en el sector tecnológico.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900/90 border border-slate-800 p-6 rounded-2xl relative shadow-xl">
+                        <h3 class="text-white font-semibold mb-4 text-sm uppercase tracking-wider text-sky-400">Enfoque principal</h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Desarrollo Web & Mobile</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Modelado de Bases de Datos</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Arquitectura y Redes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HABILIDADES / TECH STACK -->
+        <section id="skills" class="py-24 px-6 border-t border-slate-800/60">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                    <span class="text-sky-400">02.</span> Habilidades y Tecnologías
+                </h2>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-php"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">PHP</h3>
+                    </div>
+
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">MySQL</h3>
+                    </div>
+
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">Flutter / Dart</h3>
+                    </div>
+
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">JavaScript</h3>
+                    </div>
+
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">HTML5 / CSS3</h3>
+                    </div>
+
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-git-alt"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">Git & GitHub</h3>
+                    </div>
+
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">Redes & Cisco</h3>
+                    </div>
+
+                    <div class="bg-slate-900/60 border border-slate-800 hover:border-sky-500/50 p-5 rounded-2xl transition-all text-center group">
+                        <div class="text-3xl text-sky-400 mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="text-white font-medium text-sm">VS Code / XAMPP</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
+        <section id="projects" class="py-24 px-6 border-t border-slate-800/60 bg-slate-950/40">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                    <span class="text-sky-400">03.</span> Proyectos Destacados
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <i class="fa-solid fa-folder-open text-sky-400 text-2xl"></i>
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Demo"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="text-white font-semibold text-lg mb-2">Mi Almacén App</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                                Aplicación multiplataforma desarrollada en Flutter y Dart para gestionar control de stock, ubicaciones y fechas de caducidad.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-sky-300">
+                            <span class="bg-sky-950/50 border border-sky-800/50 px-2.5 py-1 rounded-md">Flutter</span>
+                            <span class="bg-sky-950/50 border border-sky-800/50 px-2.5 py-1 rounded-md">Dart</span>
+                            <span class="bg-sky-950/50 border border-sky-800/50 px-2.5 py-1 rounded-md">REST API</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 flex flex-col justify-between transition-all">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <i class="fa-solid fa-folder-open text-sky-400 text-2xl"></i>
+                                <div class="flex items-center gap-3">
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub"><i class="fa-brands fa-github text-lg"></i></a>
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Demo"><i class="fa-solid fa-arrow-up-right-from-square text-sm"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="text-white font-semibold text-lg mb-2">Backend GPS & Check-ins</h3>
+                            <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                                Sistema backend local implementado en PHP y MySQL integrado con XAMPP para procesar coordenadas GPS y subidas de imágenes.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-sky-300">
+                            <span class="bg-sky-950/50 border border-sky-800/50 px-2.5 py-1 rounded-md">PHP</span>
+                            <span class="bg-sky-950/50 border border-sky-800/50 px-2.5 py-1 rounded-md">MySQL</span>
+                            <span class="bg-sky-950/50 border border-sky-800/50 px-2.5 py-1 rounded-md">XAMPP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contact" class="py-24 px-6 border-t border-slate-800/60">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                    <span class="text-sky-400">04.</span> ¿Conectamos?
+                </h2>
+                <p class="text-slate-400 mb-8">
+                    Actualmente estoy en búsqueda activa de oportunidades laborales. Si tienes alguna propuesta o deseas charlar, mi bandeja de entrada está abierta.
+                </p>
+
+                <div class="flex justify-center gap-4 mb-10">
+                    <a href="mailto:tucorreo@email.com" class="bg-slate-900 border border-slate-800 hover:border-sky-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-sky-400"></i> Correo
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-sky-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-linkedin text-sky-400"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com" target="_blank" class="bg-slate-900 border border-slate-800 hover:border-sky-500 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center gap-2">
+                        <i class="fa-brands fa-github text-sky-400"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-slate-800/60 text-center text-xs text-slate-500">
+        <p>Diseñado y construido por Fernando • 2026</p>
+    </footer>
+
+    <!-- SCRIPT JS INTERACTIVO -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
